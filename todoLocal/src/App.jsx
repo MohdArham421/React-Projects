@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import {TodoProvider} from "./contexts"
 import './App.css'
+import { TodoForm, TodoItem } from "./components";
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -30,7 +31,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify("todos"))
+    localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
 
 
